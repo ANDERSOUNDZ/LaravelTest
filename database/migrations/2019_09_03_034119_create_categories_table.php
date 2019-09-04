@@ -17,6 +17,9 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('name')->unique();
+            //INICIO - Relacion llaves foraneas - Creando relacion a los usuarios 
+            $table->unsignedInteger('user_id');
+            //FIN - Relacion llaves foraneas -
         });
     }
 

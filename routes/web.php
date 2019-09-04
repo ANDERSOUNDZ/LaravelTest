@@ -61,6 +61,7 @@ Route::get('/', function () {
     $user->save();
     return 'Guardo Usuario Exitosamente';
     */
+    
     //FIN - ELOQUENT - CODIGO MAS MANTENIBLE
 
     

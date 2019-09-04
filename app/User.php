@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //INICIO Para hacer una relacion inversa cuales categorias creó un usuario
+    public function categories(){
+        return $this->hasMany(Category::class);
+    }
+    //FIN Para hacer una relacion inversa cuales categorias creó un usuario
+
 }
