@@ -46,11 +46,46 @@ Route::get('/', function () {
     //--------------------------------------FIN PRIMERA CLASE-----------------------------------------------
 
     //-------------------------------------INICIO 2DA CLASE--------------------------------------------------
-    //CREAR Y OBTENER REGRISTROS
+    
+    //INICIO - ELOQUENT - CODIGO MAS MANTENIBLE
+    //Para crear un nuevo registro o nueva instancia de clase
+
+    /*
+    $password = bcrypt('1234');
+
+    $user = new App\User();
+    $user->name = 'Daniel';
+    $user->email ='andersonmikol@livo.com';
+    $user->password = $password;
+    //para guardar en la base de datos es utilizar el metodo save
+    $user->save();
+    return 'Guardo Usuario Exitosamente';
+    */
+    //FIN - ELOQUENT - CODIGO MAS MANTENIBLE
+
+    
+    //INICIO - Para ver que registros tiene una tabla se utiliza 
+    
+            //crear registro en la tabla 
+                    /*
+                    DB::table('categories')->insert([
+                        ['name'=>'Anderson'],
+                    ]);
+
+                    return 'Registro Creado';
+                    */
+            //fin crear registro tabla
+
+        //return App\Category::all();
+        return App\User::all();
+
+
+    //FIN - Para ver que registros tiene una tabla se utiliza 
 
 
 
     //-------------------------------------FIN 2DA CLASE--------------------------------------------------
     
+
 
 });
